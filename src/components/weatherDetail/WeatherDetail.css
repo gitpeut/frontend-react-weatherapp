@@ -1,5 +1,5 @@
 .day-part {
-    height: 120px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,10 +11,15 @@
 
 .icon-wrapper {
     width: 40px;
+    height: 80px;
 }
 
 .day-part .description {
     margin: 8px 0;
     min-height: 34px;
     font-weight: 600;
+}
+
+.legend{
+    padding-bottom: 10px;
 }

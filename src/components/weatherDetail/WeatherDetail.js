@@ -1,14 +1,24 @@
-import React from 'react';
-import './WeatherDetail.css';
+import React,{useContext} from 'react';
+import iconMapper from "../../helpers/iconMapper";
+import {TempContext} from "../../context/TempProvider";
 
-function WeatherDetail() {
+import './WeatherDetail.css';
+import createTimeString from "../../helpers/createTimeString";
+
+function WeatherDetail( { hour, temp, type, description} ) {
+    const { kelvinToMetric } = useContext( TempContext );
+
+    // console.log('weather detail');
+    // console.log( useContext( TempContext ) );
+
   return (
     <section className="day-part">
+      <p className="legend">{ createTimeString( hour ) }</p>
       <span className="icon-wrapper">
-        *Icoontje van het weer*
+          { iconMapper(type) }
       </span>
-      <p className="description">Zonnig</p>
-      <p>13&deg; C</p>
+      <p className="description">{description}</p>
+      <p>{ kelvinToMetric( temp) }</p>
     </section>
   );
 };

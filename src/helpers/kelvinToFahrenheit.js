@@ -1,9 +1,10 @@
 
 
-function kelvinToCelsius( kelvins ){
-    const celsius = Math.round( kelvins - 273.15 ); // from Kelvin to to Celsius
+function kelvinToFahrenheit( kelvins ){
 
-    return( `${celsius} °C`);
+    const fahrenheit = Math.round( ( (kelvins - 273.15)*1.8 ) + 32 ); // from Kelvin to to Celsius
+
+    return( `${fahrenheit} °F`);
 }
 
-export default kelvinToCelsius;
+export default kelvinToFahrenheit;

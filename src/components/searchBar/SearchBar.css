@@ -18,6 +18,9 @@
     color: white;
     cursor: pointer;
     outline: none;
+    width: 19%;
+   /*jb added width to make Firefox play nicely and place the Zoek button
+   not under the input field, but next to it */
 }
 
 .searchbar input,

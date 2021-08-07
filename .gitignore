@@ -14,6 +14,9 @@
 
 .eslintcache
 
+# apikey is private, do not include in Git
+/src/helpers/getApiKey.js
+
 # misc
 .DS_Store
 .env.local
